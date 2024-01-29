@@ -7,30 +7,52 @@
   <link rel="stylesheet" href="complaint.css">
 </head>
 <body>
+    <div class="heading">
+        <img src="conatct.webp" class="logo">
+        <div class="nav">
+            <a class="active" href="destination.html">Features</a>
+            <a href="booking.html">Hostel & Mess</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Complaints</a>
+        </div>
+    </div>
   <header>
     <h1>Student Complaints</h1>
   </header>
 
   <section id="complaintForm">
     <h2>Submit a Complaint</h2>
+
     <form id="complaintSubmissionForm">
-      <label for="complaintType">Complaint Type:</label>
+        <label for="complaintText">Name: *</label>
+      <textarea id="complaintText" class="imp" name="complaintText" required></textarea>
+      <label for="complaintText">E-mail: *</label>
+      <textarea id="complaintText"class="imp" name="complaintText" required></textarea>
+      <label for="complaintText">Contact No :*</label>
+      <textarea id="complaintText" class="imp" name="complaintText" required></textarea>
+      <label for="complaintType" >Complaint Type:*</label>
       <select id="complaintType" name="complaintType">
+        <option value="select">Select Type</option>
         <option value="hostel">Hostel</option>
         <option value="mess">Mess</option>
+        <option value="college">College</option>
         <!-- Add more options as needed -->
       </select>
 
       <label for="complaintText">Complaint:</label>
       <textarea id="complaintText" name="complaintText" required></textarea>
-
+        <input type="file" class="file">
       <button type="button" onclick="submitComplaint()">Submit Complaint</button>
     </form>
+    <section id="complaintList">
+        <h2>Complaints List</h2>
+        <ul id="complaintsList"></ul>
+      </section>
   </section>
 
-  <section id="complaintList">
-    <h2>Complaints List</h2>
-    <ul id="complaintsList"></ul>
-  </section>
+  
 
-  <script src="app
+  <script src="complaint.js"></script>
+</body>
+</html>
