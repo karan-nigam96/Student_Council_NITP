@@ -14,7 +14,7 @@ body {
 }
 .logo{
     margin-left: 2vh;
-    border-radius: 50%;
+    border-radius: 10%;
     height:7vh;
 }
 .heading .nav {

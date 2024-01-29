@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .heading {
     display: flex;
     flex-direction: row;
@@ -9,7 +14,7 @@
 }
 .logo{
     margin-left: 2vh;
-    border-radius: 50%;
+    border-radius: 10%;
     height:7vh;
 }
 .heading .nav {
@@ -36,6 +41,10 @@ header {
   color: #fff;
   text-align: center;
   padding: 10px;
+  height: 10vh;
+}
+header h1{
+  margin-top: 2vh;
 }
 .nav a {
     padding-left: 2vh;
@@ -50,7 +59,7 @@ header {
     border-radius: 20px;
     margin-right: 2vh;
     transition-property: background-color;
-    transition-duration: 0.6s;
+    transition-duration: 0.8s;
 }
 .content {
   display: flex;

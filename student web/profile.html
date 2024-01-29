@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .profile-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .user-info {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .user-info span {
+            font-weight: bold;
+        }
+
+        .edit-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .edit-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .edit-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .edit-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .save-button {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a{
+            margin-top: 5px;
+            text-decoration:none;
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    background-color: rgb(18, 18, 62);
+    width: 100vw;
+}
+.logo{
+    margin-left: 2vh;
+    border-radius: 20%;
+    height:7vh;
+    width: 6vw;
+    margin-left: 4vh;
+}
+.heading .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vw;
+}
+.heading .nav a:hover {
+   font-size: 2.5vh;
+   background-color: white;
+   color: rgb(0, 0, 33);
+   display: flex;
+   align-items: center;
+   height: 4vh;
+   border-radius: 20px;
+   padding-left: 2vh;
+   padding-right: 2vh;
+   margin-right: 1em;
+}
+.nav a {
+    padding-left: 2vh;
+    padding-right: 2vh;
+    text-decoration: none;
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 4vh;
+    border-radius: 20px;
+    margin-right: 2vh;
+    transition-property: background-color;
+    transition-duration: 0.6s;
+}
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <img src="logo.jpg" class="logo">
+        <div class="nav">
+          <a href="index.html">Home</a>
+            <a href="hostel.html">Hostel & Mess</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="complaint.html">Complaints</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </div>
+
+<div class="profile-container" id="profileContainer">
+    <div class="profile-picture">
+        <img src="loo.png" alt="Profile Picture">
+    </div>
+
+    <div class="user-info" id="userInfo">
+        <span id="username">Ankur Verma</span><br>
+        <span id="email">ankurverma7707@gmail.com</span>
+        <br>
+        <a href="#"><span id="Problem_Status">Problem Status</span></a>
+    </div>
+
+    <button class="edit-button" onclick="toggleEditForm()">Edit Profile</button>
+
+    <form class="edit-form" id="editForm">
+        <label for="editUsername">Username:</label>
+        <input type="text" id="editUsername" value="Ankur Verma">
+
+        <label for="editEmail">Email:</label>
+        <input type="email" id="editEmail" value="ankurverma7707@gmail.com">
+
+        <button type="button" class="save-button" onclick="saveProfile()">Save</button>
+    </form>
+</div>
+
+<script>
+    function toggleEditForm() {
+        const editForm = document.getElementById('editForm');
+        const profileInfo = document.getElementById('userInfo');
+        const editUsernameInput = document.getElementById('editUsername');
+        const editEmailInput = document.getElementById('editEmail');
+
+        editForm.style.display = editForm.style.display === 'none' ? 'block' : 'none';
+        profileInfo.style.display = profileInfo.style.display === 'none' ? 'block' : 'none';
+
+        editUsernameInput.value = document.getElementById('username').innerText;
+        editEmailInput.value = document.getElementById('email').innerText;
+    }
+
+    function saveProfile() {
+        const editUsernameInput = document.getElementById('editUsername');
+        const editEmailInput = document.getElementById('editEmail');
+        const usernameElement = document.getElementById('username');
+        const emailElement = document.getElementById('email');
+
+        usernameElement.innerText = editUsernameInput.value;
+        emailElement.innerText = editEmailInput.value;
+
+        toggleEditForm();
+    }
+</script>
+
+</body>
+</html>

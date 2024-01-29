@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +6,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .comments-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .comment {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .comment-body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .comment-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .comment-actions button {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
-    <header class="header">
-
-        <a href="index.html" class="logo">StudentCouncil</a>
-       
-        <nav class="navbar">
-            <a class="active" href="destination.html">Features</a>
-            <a href="booking.html">Hostel & Mess</a>
+    <div class="heading">
+        <img src="logo.jpg" class="logo">
+        <div class="nav">
+          <a href="index.html">Home</a>
+            <a href="hostel.html">Hostel & Mess</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
-            <a href="#">Complaints</a>
-        </nav>
-    </header>
+            <a href="complaint.html">Complaints</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </div>
+    <section class="main">
+        <img src="img1.jpg" >
+        <div class="content">
+            <h1>Welcome To Student Council Of NIT Patna</h1>
+        </div>
+    </section>
+    <div class="container">
+        <div class="Complaints">
+            <img src="online-edu-or-e-learning-footage-127241401_iconl.webp">
+            <h1>Problems resolved</h1>
+          
+        </div>
+    </div>
+    <div class="comments">
+        <h2>
+           Top Comments
+        </h2>
+        <p>Here are few past comments </p>
+        
+    </div>
+    <div class="comments-container" id="commentsContainer">
+  
+    </div>
+    <footer>
+        <p id="blogs">Reach out on our Social Media</p>
+        <div class="contact-me">
+        <div class="contact">
+        <span class="con-logo">
+            <i class="fa-solid fa-phone"></i>
+        + 91 944xx xxxxx
+        </span>
+        <span class="email">
+        <a href="mailto:nigamkaran812@gmail.com">
+            <i class="fas fa-envelope"></i>
+            student_council_nitp@ac.in
+        </a>
+        </span>
+        </div>
+        <div class="icons">
+        <span>
+        <a href="https://www.linkedin.com/in/karan-nigam-a10713284">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <p>linkedin</p>
+        </span>
+        <span>
+        <a href="https://www.instagram.com/karannigam9621">
+        <i class="fab fa-instagram" ></i>
+        </a>
+        <p>Instagram</p>
+        </span>
+        <span>
+        <a href="https://www.facebook.com/profile.php?id=100088140395984">
+        <i class="fa-brands fa-facebook"></i>
+        </a>
+        <p>facebook</p>
+        </span>
+        </div>
+       </div>
+       </footer>
+    <script>
+      
+        const commentsData = [
+            { username: 'Ankur', content: 'This is a great comment!', likes: 15 },
+            { username: 'Ashutosh', content: 'I agree with User1!', likes: 10 },
+            { username: 'Karan', content: 'Nice discussion here.', likes: 5 },
+            { username: 'Pankaj', content: 'Happy to hear that', likes: 50 },
+        { username: 'Satyendra', content: 'Nice discussion here.', likes: 100 },
+        ];
+     
+        commentsData.sort((a, b) => b.likes - a.likes);
+    
+      
+        function renderComments() {
+            const commentsContainer = document.getElementById('commentsContainer');
+    
+         
+            commentsContainer.innerHTML = '';
+    
+          
+            commentsData.forEach(comment => {
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('comment');
+    
+                const commentHeader = document.createElement('div');
+                commentHeader.classList.add('comment-header');
+    
+                const usernameElement = document.createElement('span');
+                usernameElement.innerText = comment.username;
+                commentHeader.appendChild(usernameElement);
+    
+                const likesElement = document.createElement('span');
+                likesElement.innerText = `Likes: ${comment.likes}`;
+                commentHeader.appendChild(likesElement);
+    
+                commentElement.appendChild(commentHeader);
+    
+                const commentBody = document.createElement('div');
+                commentBody.classList.add('comment-body');
+                commentBody.innerText = comment.content;
+                commentElement.appendChild(commentBody);
+    
+                const commentActions = document.createElement('div');
+                commentActions.classList.add('comment-actions');
+    
+                const likeButton = document.createElement('button');
+                likeButton.innerText = 'Like';
+                likeButton.addEventListener('click', () => {
+                   
+                    comment.likes++;
+                    likesElement.innerText = `Likes: ${comment.likes}`;
+                });
+                commentActions.appendChild(likeButton);
+    
+                commentElement.appendChild(commentActions);
+    
+                commentsContainer.appendChild(commentElement);
+            });
+        }
+    
+       
+        renderComments();
+    </script>
+    
 </body>
 </html>

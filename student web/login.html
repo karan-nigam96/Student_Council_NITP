@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    background-color: rgb(18, 18, 62);
+    width: 100vw;
+}
+.logo{
+    margin-left: 2vh;
+    border-radius: 20%;
+    height:7vh;
+    width: 6vw;
+    margin-left: 4vh;
+}
+.heading .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vw;
+}
+.heading .nav a:hover {
+   font-size: 2.5vh;
+   background-color: white;
+   color: rgb(0, 0, 33);
+   display: flex;
+   align-items: center;
+   height: 4vh;
+   border-radius: 20px;
+   padding-left: 2vh;
+   padding-right: 2vh;
+   margin-right: 1em;
+}
+.nav a {
+    padding-left: 2vh;
+    padding-right: 2vh;
+    text-decoration: none;
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 4vh;
+    border-radius: 20px;
+    margin-right: 2vh;
+    transition-property: background-color;
+    transition-duration: 0.6s;
+}
+        .page{
+            background-color: rgba(165, 194, 169, 0.177);
+            height:55vh;
+            width:30%;
+           margin:auto;
+            display:flex;
+           flex-direction: column;
+           border-radius: 8%;
+        }
+        .form{
+            margin-top: 15px;
+        display:inline-block;
+         
+          height:50%;
+          width:60%;
+        
+          margin:auto;
+          padding:8px;
+          overflow-x: none;
+        }
+        .image{
+            display: inline-block;
+            height:13vh;
+            width:100%;
+            margin-top: 3px;
+            
+        }
+        img{
+            margin-top: 15px;
+            height:13vh;
+            width:29%;
+            margin-left: 34%;
+          
+        }
+       input{
+        margin-top: 3%;
+        border-radius: 1px;
+        padding: 3px;
+        width:100%;
+        box-sizing:border-box;
+       border-inline: 4px solid white;
+       }
+       label{
+        font-weight: bold;
+       }
+       #remember{
+      
+       width:10%;
+       height:1.5vh;
+       top:3%
+       }
+    button{
+        margin-top: 6%;
+       align-self: center;
+       display:inline-block;
+        width:100%;
+        border-radius: 6px;
+        border: none;
+        background-color: rgba(32, 165, 121, 0.912);
+        height:3vh;
+        color:white;
+    }
+    #reme{
+        display:inline-block;
+        margin-top: 20px;
+    }
+    .animate{
+        -webkit-animation: animatezoom 0.6s;
+        animation:animatezoom 0.6s
+    }
+    @-webkit-keyframes animatezoom{
+        from {-webkit-transform:scale(0)}
+        to{-webkit-transform:scale(1)}
+    }
+    @keyframes animatezoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+    }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <img src="logo.jpg" class="logo">
+        <div class="nav">
+          <a href="index.html">Home</a>
+            <a href="hostel.html">Hostel & Mess</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="complaint.html">Complaints</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </div>
+    <div class="page animate">
+        <div class="image">
+       <img src="loo.png">
+        </div>
+        <div class="form">
+        <form>
+            <label for="text">Username</label>
+          <input type="text" id="text" placeholder="Enter Username"name="user">
+          <br>
+          <label for="pass">Password</label>
+          <input type="password" id="text" placeholder="Enter password"name="pass">
+          <br>
+          <button id="login">Login</button>
+          <br>
+          <label for="remember" id="reme">Remember me</label>
+          <input type="checkbox" id="remember">
+          
+        </form>
+    </div>
+    </div>
+</body>
+</html>

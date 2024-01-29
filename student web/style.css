@@ -1,59 +1,270 @@
-*{
-    margin:0px;
-    padding:0px;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.header{
-    display:flex;
-   background-color:rgba(56, 119, 197, 0.737);
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    background-color: rgb(18, 18, 62);
+    width: 100vw;
+}
+.logo{
+    margin-left: 2vh;
+    border-radius: 20%;
     height:7vh;
-    position:fixed;
-    z-index: 1;
+    width: 6vw;
+    margin-left: 4vh;
+}
+.heading .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vw;
+}
+.heading .nav a:hover {
+   font-size: 2.5vh;
+   background-color: white;
+   color: rgb(0, 0, 33);
+   display: flex;
+   align-items: center;
+   height: 4vh;
+   border-radius: 20px;
+   padding-left: 2vh;
+   padding-right: 2vh;
+   margin-right: 1em;
+}
+.nav a {
+    padding-left: 2vh;
+    padding-right: 2vh;
+    text-decoration: none;
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 4vh;
+    border-radius: 20px;
+    margin-right: 2vh;
+    transition-property: background-color;
+    transition-duration: 0.6s;
+}
+img{
+    height:800px;
     width:100%;
 }
-
-
-nav.navbar{
-    width:80vw;
-    display:flex;
+.content h1{
+ font-size: 100px;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+ color:rgba(28, 36, 87, 0.815);
  
-    margin-left: 38vw;
-  
 }
-.navbar{
-    align-self: center;
-   width:50%;
-}
-.navbar a:is(:link,:active,:visited){
-    text-decoration: none;
-    display:flex;
-    padding-left: 4vw;
-    color:red;
-  
-}
-.navbar a:is(:link,:active,:visited).active{
-    text-decoration: none;
-    display:flex;
-    padding-left: 4vw;
+.main{
+    position:absolute;
    
+}
+.content{
+   position: relative;
+   top:-70vh;
+   width:50%;
+   margin-left: 20px;
+}
+ .Complaints{
+    text-align: center;
+    background-color:rgb(48, 59, 75);
+    color:bisque;
   
+ }
+.comments{
+  
+box-shadow : 0px 1px black;
+height:7vh;
+color: black;
+text-align: center;
+
+}
+.comments h2{
+margin-left: 10px;
+}
+.comments p{
+    margin-left: 10px;
+    }
+.comments-container{
+    border:2px solid;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #003049;
+    color: #fff;
+    align-items: center;
+    height: 60vh;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8vh;
+}
+.contact .con-logo {
+    padding: 10px;
+    color: #fff;
+}
+.con-logo i {
+    padding-right: 10px;
+}
+.contact .email {
+    padding: 10px;
+    text-decoration: none;
+}
+.email i {
+    padding-right: 10px;
+    text-decoration: none;
+}
+.email a {
+    color: white;
 }
 
-a.logo :is(:link,:active,:visited).active{
-    margin-left: 2vw;
-    align-self: center;
-    text-decoration: none;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:white;
-    font-weight: 400;
-    font-size: 25px;
+.icons {
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 3vh;
 }
-a.logo:is(:link,:active,:visited){
-    margin-left: 2vw;
-    align-self: center;
+.icons a {
+    padding: 10px;
+    color: #ffbe0b;
+}
+a {
     text-decoration: none;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:green;
-    font-weight: 400;
-    font-size: 25px;
+}
+
+#blogs {
+    font-size: 4em;
+    font-family: Barlow Condensed,sans-serif;
+    margin-top: 7vh;
+    font-weight: bold;
+}
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    margin: 4vh;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: Barlow Condensed,sans-serif;
+    margin: 0 0 4vh 0;
+}
+.contact h1 {
+    font-size: 4vh;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1vh;
+    color: white;
+    width: 100%;
+}
+.icons i{
+    color: white;
+    font-size: 3.5vh;
+}
+.icons a {
+    color: white;
+    margin-top: 1.5vh;
+}
+.icons h1 {
+    font-size: 4vh;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: Barlow Condensed,sans-serif;
+}
+.contact span {
+    margin-top: 1.5vh;
+}
+.contact span i {
+    color: white;
+}
+.icons span {
+    display: flex;
+    margin-left: 1.7vh;
+
+}
+
+.icons span p {
+    font-family: Barlow Condensed,sans-serif;
+    align-self: center;
+}
+
+@media (max-width: 1145px) {
+
+    .heading h1 {
+        display: none;
+    }
+    .heading .nav {
+        width: 100vw;
+        margin-right: none;
+        margin-left: 2vh;
+    }
+    .contact {
+        margin: 0 0 4vh 0;
+    }
+    .contact-me {
+        width: 80vw;
+    }
+    .icons span {
+        display: flex;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .heading {
+        width: 100%;
+    }
+    .nav a {
+        width: 17vw;
+        margin-right: 1.3vh;
+        font-size: 1.6vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+        height: 3vh;
+        display: flex;
+        justify-content: center;
+    }
+    .heading .nav {
+        margin-left: 0;
+        width: 100vw;
+    }
+    label {
+        font-size: 2.1vh;
+        margin-bottom: 1vh;
+    }
+    input {
+        height: 4vh;
+        font-size: 3vh;
+    }
+    form .element {
+        width: 50vw;
+    }
+    .msg {
+        height: 8vh;
+    }
+    #blogs {
+        font-size: 5vh;
+        margin-top: 4vh;
+    }
 }
