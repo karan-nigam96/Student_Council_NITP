@@ -1,0 +1,59 @@
+*{
+    margin:0px;
+    padding:0px;
+
+}
+.header{
+    display:flex;
+   background-color:rgba(56, 119, 197, 0.737);
+    height:7vh;
+    position:fixed;
+    z-index: 1;
+    width:100%;
+}
+
+
+nav.navbar{
+    width:80vw;
+    display:flex;
+ 
+    margin-left: 38vw;
+  
+}
+.navbar{
+    align-self: center;
+   width:50%;
+}
+.navbar a:is(:link,:active,:visited){
+    text-decoration: none;
+    display:flex;
+    padding-left: 4vw;
+    color:red;
+  
+}
+.navbar a:is(:link,:active,:visited).active{
+    text-decoration: none;
+    display:flex;
+    padding-left: 4vw;
+   
+  
+}
+
+a.logo :is(:link,:active,:visited).active{
+    margin-left: 2vw;
+    align-self: center;
+    text-decoration: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:white;
+    font-weight: 400;
+    font-size: 25px;
+}
+a.logo:is(:link,:active,:visited){
+    margin-left: 2vw;
+    align-self: center;
+    text-decoration: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:green;
+    font-weight: 400;
+    font-size: 25px;
+}
